@@ -1,0 +1,1158 @@
+{
+ "groups": [
+  {
+   "id": "splash",
+   "title": "Splash screen"
+  },
+  {
+   "id": "brand",
+   "title": "Logo & branding"
+  },
+  {
+   "id": "seo",
+   "title": "Page title & SEO"
+  },
+  {
+   "id": "header",
+   "title": "Header & navigation"
+  },
+  {
+   "id": "hero",
+   "title": "Hero section"
+  },
+  {
+   "id": "about",
+   "title": "About us"
+  },
+  {
+   "id": "process",
+   "title": "How it works"
+  },
+  {
+   "id": "products",
+   "title": "Products & machinery"
+  },
+  {
+   "id": "services",
+   "title": "Services & specification details"
+  },
+  {
+   "id": "vision",
+   "title": "Vision & mission"
+  },
+  {
+   "id": "why",
+   "title": "Why choose us"
+  },
+  {
+   "id": "commitment",
+   "title": "Our commitment"
+  },
+  {
+   "id": "contact",
+   "title": "Contact & enquiry form"
+  },
+  {
+   "id": "footer",
+   "title": "Footer"
+  },
+  {
+   "id": "messages",
+   "title": "Messages & notifications"
+  }
+ ],
+ "fields": [
+  {
+   "key": "splash.tagline",
+   "group": "splash",
+   "type": "text",
+   "label": "Tagline under the logo",
+   "default": "Transforming Waste into Valuable Resources"
+  },
+  {
+   "key": "splash.skip",
+   "group": "splash",
+   "type": "text",
+   "label": "Skip button label",
+   "default": "Skip intro"
+  },
+  {
+   "key": "brand.logo",
+   "group": "brand",
+   "type": "image",
+   "label": "Company logo (header, footer, splash animation)",
+   "default": "/img/logo.png"
+  },
+  {
+   "key": "brand.favicon",
+   "group": "brand",
+   "type": "image",
+   "label": "Browser tab icon (favicon)",
+   "default": "/img/favicon.png"
+  },
+  {
+   "key": "brand.name",
+   "group": "brand",
+   "type": "text",
+   "label": "Company name (used in image descriptions)",
+   "default": "Sky Protein Oil Private Limited"
+  },
+  {
+   "key": "seo.title",
+   "group": "seo",
+   "type": "text",
+   "label": "Browser tab / Google title",
+   "default": "Sky Protein Oil Private Limited | Waste Processing & Rendering Machinery"
+  },
+  {
+   "key": "seo.description",
+   "group": "seo",
+   "type": "textarea",
+   "label": "Google description",
+   "default": "Sky Protein Oil Private Limited designs, manufactures and supplies industrial waste processing machinery and rendering systems for poultry waste, hatchery waste, eggshell waste, food waste, oil recovery and drying."
+  },
+  {
+   "key": "header.name_1",
+   "group": "header",
+   "type": "text",
+   "label": "Brand name next to logo - first word",
+   "default": "Sky"
+  },
+  {
+   "key": "header.name_2",
+   "group": "header",
+   "type": "text",
+   "label": "Brand name next to logo - rest",
+   "default": "Protein Oil"
+  },
+  {
+   "key": "header.name_sub",
+   "group": "header",
+   "type": "text",
+   "label": "Small line under brand name",
+   "default": "Private Limited"
+  },
+  {
+   "key": "header.nav_home",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: Home",
+   "default": "Home"
+  },
+  {
+   "key": "header.nav_about",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: About",
+   "default": "About Us"
+  },
+  {
+   "key": "header.nav_products",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: Products",
+   "default": "Products"
+  },
+  {
+   "key": "header.nav_services",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: Services",
+   "default": "Services"
+  },
+  {
+   "key": "header.nav_why",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: Why us",
+   "default": "Why Us"
+  },
+  {
+   "key": "header.nav_contact",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: Contact",
+   "default": "Contact"
+  },
+  {
+   "key": "header.cta",
+   "group": "header",
+   "type": "text",
+   "label": "Header button",
+   "default": "Request a Quote"
+  },
+  {
+   "key": "hero.badge",
+   "group": "hero",
+   "type": "text",
+   "label": "Small badge above heading",
+   "default": "Advanced Waste Processing & Rendering Machinery Solutions"
+  },
+  {
+   "key": "hero.title_1",
+   "group": "hero",
+   "type": "text",
+   "label": "Heading - first line",
+   "default": "Transforming Waste into"
+  },
+  {
+   "key": "hero.title_2",
+   "group": "hero",
+   "type": "text",
+   "label": "Heading - highlighted line",
+   "default": "Valuable Resources."
+  },
+  {
+   "key": "hero.text",
+   "group": "hero",
+   "type": "textarea",
+   "label": "Intro paragraph",
+   "default": "We specialize in the design, manufacturing and supply of industrial waste processing machinery and rendering systems — practical engineering solutions for poultry waste, hatchery waste, food waste and other suitable organic by-products."
+  },
+  {
+   "key": "hero.cta_primary",
+   "group": "hero",
+   "type": "text",
+   "label": "Primary button",
+   "default": "Explore Our Machinery"
+  },
+  {
+   "key": "hero.cta_secondary",
+   "group": "hero",
+   "type": "text",
+   "label": "Secondary button",
+   "default": "Request a Quote"
+  },
+  {
+   "key": "hero.chips_label",
+   "group": "hero",
+   "type": "text",
+   "label": "Label before the tags",
+   "default": "We process"
+  },
+  {
+   "key": "hero.chip_1",
+   "group": "hero",
+   "type": "text",
+   "label": "Tag 1",
+   "default": "Poultry Waste"
+  },
+  {
+   "key": "hero.chip_2",
+   "group": "hero",
+   "type": "text",
+   "label": "Tag 2",
+   "default": "Hatchery Waste"
+  },
+  {
+   "key": "hero.chip_3",
+   "group": "hero",
+   "type": "text",
+   "label": "Tag 3",
+   "default": "Food Waste"
+  },
+  {
+   "key": "hero.chip_4",
+   "group": "hero",
+   "type": "text",
+   "label": "Tag 4",
+   "default": "Oil Recovery"
+  },
+  {
+   "key": "hero.image",
+   "group": "hero",
+   "type": "image",
+   "label": "Hero machine photo",
+   "default": "/img/machine.jpg"
+  },
+  {
+   "key": "hero.caption",
+   "group": "hero",
+   "type": "text",
+   "label": "Caption on the photo",
+   "default": "Industrial rendering machinery"
+  },
+  {
+   "key": "about.eyebrow",
+   "group": "about",
+   "type": "text",
+   "label": "Small heading",
+   "default": "About Us"
+  },
+  {
+   "key": "about.title",
+   "group": "about",
+   "type": "text",
+   "label": "Heading",
+   "default": "Sky Protein Oil Private Limited"
+  },
+  {
+   "key": "about.subtitle",
+   "group": "about",
+   "type": "text",
+   "label": "Sub-heading",
+   "default": "Advanced Waste Processing & Rendering Machinery Solutions"
+  },
+  {
+   "key": "about.p1",
+   "group": "about",
+   "type": "textarea",
+   "label": "Paragraph 1",
+   "default": "Sky Protein Oil Private Limited specializes in the design, manufacturing, and supply of industrial waste processing machinery and rendering systems. We focus on providing practical engineering solutions for poultry waste, hatchery waste, food waste, and other suitable organic by-products."
+  },
+  {
+   "key": "about.p2",
+   "group": "about",
+   "type": "textarea",
+   "label": "Paragraph 2",
+   "default": "Our objective is to help industries transform waste materials into valuable resources through efficient processing, oil recovery, drying, and material recovery technologies."
+  },
+  {
+   "key": "about.p3",
+   "group": "about",
+   "type": "textarea",
+   "label": "Paragraph 3",
+   "default": "We aim to deliver reliable machinery solutions tailored to customer requirements, processing capacities, and industrial applications."
+  },
+  {
+   "key": "about.image",
+   "group": "about",
+   "type": "image",
+   "label": "About section image",
+   "default": "/img/about-flow.svg"
+  },
+  {
+   "key": "about.hl1_title",
+   "group": "about",
+   "type": "text",
+   "label": "Highlight 1 - title",
+   "default": "Practical engineering"
+  },
+  {
+   "key": "about.hl1_text",
+   "group": "about",
+   "type": "text",
+   "label": "Highlight 1 - text",
+   "default": "Machinery built around real processing needs."
+  },
+  {
+   "key": "about.hl2_title",
+   "group": "about",
+   "type": "text",
+   "label": "Highlight 2 - title",
+   "default": "Resource recovery"
+  },
+  {
+   "key": "about.hl2_text",
+   "group": "about",
+   "type": "text",
+   "label": "Highlight 2 - text",
+   "default": "Oil recovery, drying and material recovery technologies."
+  },
+  {
+   "key": "about.hl3_title",
+   "group": "about",
+   "type": "text",
+   "label": "Highlight 3 - title",
+   "default": "Tailored solutions"
+  },
+  {
+   "key": "about.hl3_text",
+   "group": "about",
+   "type": "text",
+   "label": "Highlight 3 - text",
+   "default": "Configured to your capacity and application."
+  },
+  {
+   "key": "process.eyebrow",
+   "group": "process",
+   "type": "text",
+   "label": "Small heading",
+   "default": "How It Works"
+  },
+  {
+   "key": "process.title",
+   "group": "process",
+   "type": "text",
+   "label": "Heading",
+   "default": "From Waste to Valuable Resource"
+  },
+  {
+   "key": "process.text",
+   "group": "process",
+   "type": "textarea",
+   "label": "Intro",
+   "default": "Our machinery supports each stage of turning suitable waste materials into recovered oil, protein-rich meal and other usable products."
+  },
+  {
+   "key": "process.s1_title",
+   "group": "process",
+   "type": "text",
+   "label": "Step 1 - title",
+   "default": "Waste Intake & Size Reduction"
+  },
+  {
+   "key": "process.s1_text",
+   "group": "process",
+   "type": "textarea",
+   "label": "Step 1 - text",
+   "default": "Suitable poultry, hatchery, eggshell or food waste is prepared through size-reduction stages."
+  },
+  {
+   "key": "process.s2_title",
+   "group": "process",
+   "type": "text",
+   "label": "Step 2 - title",
+   "default": "Cooking & Rendering"
+  },
+  {
+   "key": "process.s2_text",
+   "group": "process",
+   "type": "textarea",
+   "label": "Step 2 - text",
+   "default": "Rendering systems process suitable animal-origin by-products into recovered fats and protein-rich materials, depending on the raw material and selected process."
+  },
+  {
+   "key": "process.s3_title",
+   "group": "process",
+   "type": "text",
+   "label": "Step 3 - title",
+   "default": "Drying"
+  },
+  {
+   "key": "process.s3_text",
+   "group": "process",
+   "type": "textarea",
+   "label": "Step 3 - text",
+   "default": "Industrial drying reduces moisture content using the appropriate heating and drying technology."
+  },
+  {
+   "key": "process.s4_title",
+   "group": "process",
+   "type": "text",
+   "label": "Step 4 - title",
+   "default": "Oil Extraction & Recovery"
+  },
+  {
+   "key": "process.s4_text",
+   "group": "process",
+   "type": "textarea",
+   "label": "Step 4 - text",
+   "default": "Oil recovery and extraction machinery separates recoverable fats from suitable processed materials."
+  },
+  {
+   "key": "process.note",
+   "group": "process",
+   "type": "text",
+   "label": "Note below the steps",
+   "default": "Process-integrated odour collection and treatment supports improved working conditions throughout."
+  },
+  {
+   "key": "products.eyebrow",
+   "group": "products",
+   "type": "text",
+   "label": "Small heading",
+   "default": "Our Products & Machinery"
+  },
+  {
+   "key": "products.title",
+   "group": "products",
+   "type": "text",
+   "label": "Heading",
+   "default": "Machinery Solutions for Every Waste Stream"
+  },
+  {
+   "key": "products.text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Intro",
+   "default": "From poultry and hatchery waste to rendering, oil recovery and drying — every system is configured to your requirements."
+  },
+  {
+   "key": "products.cta",
+   "group": "products",
+   "type": "text",
+   "label": "Card button",
+   "default": "Enquire Now"
+  },
+  {
+   "key": "products.p1_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 1 - image",
+   "default": "/img/svc-poultry.svg"
+  },
+  {
+   "key": "products.p1_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 1 - title",
+   "default": "Poultry Waste Processing Machinery"
+  },
+  {
+   "key": "products.p1_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 1 - description",
+   "default": "We manufacture machinery for processing poultry waste and suitable poultry by-products, supporting rendering, drying, oil extraction, and protein meal production."
+  },
+  {
+   "key": "products.p2_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 2 - image",
+   "default": "/img/svc-hatchery.svg"
+  },
+  {
+   "key": "products.p2_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 2 - title",
+   "default": "Hatchery Waste Processing Machinery"
+  },
+  {
+   "key": "products.p2_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 2 - description",
+   "default": "We provide machinery solutions for processing hatchery waste, including unhatched eggs, infertile eggs, rejected eggs, egg contents, and other suitable hatchery by-products, subject to the selected process and equipment configuration."
+  },
+  {
+   "key": "products.p3_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 3 - image",
+   "default": "/img/svc-eggshell.svg"
+  },
+  {
+   "key": "products.p3_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 3 - title",
+   "default": "Eggshell Processing Machinery"
+  },
+  {
+   "key": "products.p3_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 3 - description",
+   "default": "We develop processing solutions for eggshell waste, including suitable systems for size reduction, drying, and material recovery, depending on the intended end product."
+  },
+  {
+   "key": "products.p4_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 4 - image",
+   "default": "/img/svc-food.svg"
+  },
+  {
+   "key": "products.p4_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 4 - title",
+   "default": "Food Waste Processing Machinery"
+  },
+  {
+   "key": "products.p4_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 4 - description",
+   "default": "We provide machinery solutions for processing suitable food waste from food processing facilities, commercial kitchens, and other food-related industries. Systems can be configured for size reduction, drying, and other required processing stages."
+  },
+  {
+   "key": "products.p5_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 5 - image",
+   "default": "/img/machine.jpg"
+  },
+  {
+   "key": "products.p5_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 5 - title",
+   "default": "Rendering & Protein Meal Production Systems"
+  },
+  {
+   "key": "products.p5_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 5 - description",
+   "default": "Our rendering systems are designed to process suitable animal-origin by-products into recovered fats and protein-rich materials, depending on raw material composition and the selected process."
+  },
+  {
+   "key": "products.p6_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 6 - image",
+   "default": "/img/svc-oil.svg"
+  },
+  {
+   "key": "products.p6_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 6 - title",
+   "default": "Oil Extraction & Recovery Systems"
+  },
+  {
+   "key": "products.p6_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 6 - description",
+   "default": "We provide oil recovery and extraction machinery designed to separate recoverable fats from suitable processed materials."
+  },
+  {
+   "key": "products.p7_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 7 - image",
+   "default": "/img/svc-drying.svg"
+  },
+  {
+   "key": "products.p7_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 7 - title",
+   "default": "Industrial Drying Systems"
+  },
+  {
+   "key": "products.p7_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 7 - description",
+   "default": "Our drying solutions are designed to reduce moisture content in suitable organic materials using the appropriate heating and drying technology."
+  },
+  {
+   "key": "products.p8_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 8 - image",
+   "default": "/img/svc-odour.svg"
+  },
+  {
+   "key": "products.p8_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 8 - title",
+   "default": "Odour Control & Environmental Solutions"
+  },
+  {
+   "key": "products.p8_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 8 - description",
+   "default": "We offer suitable process-integrated solutions for odour collection and treatment to support improved working conditions and responsible waste processing."
+  },
+  {
+   "key": "products.p9_image",
+   "group": "products",
+   "type": "image",
+   "label": "Product 9 - image",
+   "default": "/img/svc-custom.svg"
+  },
+  {
+   "key": "products.p9_title",
+   "group": "products",
+   "type": "text",
+   "label": "Product 9 - title",
+   "default": "Customized Industrial Machinery"
+  },
+  {
+   "key": "products.p9_text",
+   "group": "products",
+   "type": "textarea",
+   "label": "Product 9 - description",
+   "default": "We develop machinery configurations based on customer requirements, raw material characteristics, batch capacity, production targets, available utilities, and plant layout."
+  },
+  {
+   "key": "services.eyebrow",
+   "group": "services",
+   "type": "text",
+   "label": "Small heading",
+   "default": "Our Services"
+  },
+  {
+   "key": "services.title",
+   "group": "services",
+   "type": "text",
+   "label": "Heading",
+   "default": "Machinery Divisions & Specification Details"
+  },
+  {
+   "key": "services.text",
+   "group": "services",
+   "type": "textarea",
+   "label": "Intro",
+   "default": "Tell us about your waste stream and capacity — these are the details we cover for each division."
+  },
+  {
+   "key": "services.col_1",
+   "group": "services",
+   "type": "text",
+   "label": "Table column 1",
+   "default": "Division"
+  },
+  {
+   "key": "services.col_2",
+   "group": "services",
+   "type": "text",
+   "label": "Table column 2",
+   "default": "Specification Details"
+  },
+  {
+   "key": "services.row_cta",
+   "group": "services",
+   "type": "text",
+   "label": "Row link",
+   "default": "Enquire"
+  },
+  {
+   "key": "services.cta",
+   "group": "services",
+   "type": "text",
+   "label": "Button under the table",
+   "default": "Request Specifications"
+  },
+  {
+   "key": "services.r1_image",
+   "group": "services",
+   "type": "image",
+   "label": "Row 1 - picture",
+   "default": "/img/svc-poultry.svg"
+  },
+  {
+   "key": "services.r1_name",
+   "group": "services",
+   "type": "text",
+   "label": "Row 1 - division",
+   "default": "Poultry Waste"
+  },
+  {
+   "key": "services.r1_details",
+   "group": "services",
+   "type": "text",
+   "label": "Row 1 - details",
+   "default": "Capacity, cooker, dryer, oil extractor"
+  },
+  {
+   "key": "services.r2_image",
+   "group": "services",
+   "type": "image",
+   "label": "Row 2 - picture",
+   "default": "/img/svc-hatchery.svg"
+  },
+  {
+   "key": "services.r2_name",
+   "group": "services",
+   "type": "text",
+   "label": "Row 2 - division",
+   "default": "Hatchery Waste"
+  },
+  {
+   "key": "services.r2_details",
+   "group": "services",
+   "type": "text",
+   "label": "Row 2 - details",
+   "default": "Raw materials handled, process, capacity"
+  },
+  {
+   "key": "services.r3_image",
+   "group": "services",
+   "type": "image",
+   "label": "Row 3 - picture",
+   "default": "/img/svc-eggshell.svg"
+  },
+  {
+   "key": "services.r3_name",
+   "group": "services",
+   "type": "text",
+   "label": "Row 3 - division",
+   "default": "Eggshell Waste"
+  },
+  {
+   "key": "services.r3_details",
+   "group": "services",
+   "type": "text",
+   "label": "Row 3 - details",
+   "default": "Crushing, drying, intended end product"
+  },
+  {
+   "key": "services.r4_image",
+   "group": "services",
+   "type": "image",
+   "label": "Row 4 - picture",
+   "default": "/img/svc-food.svg"
+  },
+  {
+   "key": "services.r4_name",
+   "group": "services",
+   "type": "text",
+   "label": "Row 4 - division",
+   "default": "Food Waste"
+  },
+  {
+   "key": "services.r4_details",
+   "group": "services",
+   "type": "text",
+   "label": "Row 4 - details",
+   "default": "Waste type, processing method, capacity"
+  },
+  {
+   "key": "services.r5_image",
+   "group": "services",
+   "type": "image",
+   "label": "Row 5 - picture",
+   "default": "/img/svc-oil.svg"
+  },
+  {
+   "key": "services.r5_name",
+   "group": "services",
+   "type": "text",
+   "label": "Row 5 - division",
+   "default": "Oil Extraction"
+  },
+  {
+   "key": "services.r5_details",
+   "group": "services",
+   "type": "text",
+   "label": "Row 5 - details",
+   "default": "Extraction method, oil recovery system"
+  },
+  {
+   "key": "services.r6_image",
+   "group": "services",
+   "type": "image",
+   "label": "Row 6 - picture",
+   "default": "/img/machine.jpg"
+  },
+  {
+   "key": "services.r6_name",
+   "group": "services",
+   "type": "text",
+   "label": "Row 6 - division",
+   "default": "Rendering Plant"
+  },
+  {
+   "key": "services.r6_details",
+   "group": "services",
+   "type": "text",
+   "label": "Row 6 - details",
+   "default": "Complete machinery, utilities, plant capacity"
+  },
+  {
+   "key": "vision.vision_title",
+   "group": "vision",
+   "type": "text",
+   "label": "Vision - heading",
+   "default": "Our Vision"
+  },
+  {
+   "key": "vision.vision_text",
+   "group": "vision",
+   "type": "textarea",
+   "label": "Vision - text",
+   "default": "To become a trusted industrial machinery manufacturer for poultry waste, hatchery waste, food waste, and organic by-product processing, delivering practical technologies that support resource recovery and sustainable industrial development."
+  },
+  {
+   "key": "vision.mission_title",
+   "group": "vision",
+   "type": "text",
+   "label": "Mission - heading",
+   "default": "Our Mission"
+  },
+  {
+   "key": "vision.mission_text",
+   "group": "vision",
+   "type": "textarea",
+   "label": "Mission - text",
+   "default": "To provide dependable machinery, efficient processing solutions, and customer-focused engineering services that help industries improve waste management and recover value from suitable by-products."
+  },
+  {
+   "key": "why.eyebrow",
+   "group": "why",
+   "type": "text",
+   "label": "Small heading",
+   "default": "Why Choose Us"
+  },
+  {
+   "key": "why.title",
+   "group": "why",
+   "type": "text",
+   "label": "Heading",
+   "default": "Why Choose Sky Protein Oil Private Limited?"
+  },
+  {
+   "key": "why.w1",
+   "group": "why",
+   "type": "text",
+   "label": "Point 1",
+   "default": "Specialized waste processing and rendering machinery solutions."
+  },
+  {
+   "key": "why.w2",
+   "group": "why",
+   "type": "text",
+   "label": "Point 2",
+   "default": "Multiple equipment options for different waste streams."
+  },
+  {
+   "key": "why.w3",
+   "group": "why",
+   "type": "text",
+   "label": "Point 3",
+   "default": "Machinery configurations tailored to customer requirements."
+  },
+  {
+   "key": "why.w4",
+   "group": "why",
+   "type": "text",
+   "label": "Point 4",
+   "default": "Focus on process efficiency and resource recovery."
+  },
+  {
+   "key": "why.w5",
+   "group": "why",
+   "type": "text",
+   "label": "Point 5",
+   "default": "Solutions for batch-based and customized industrial applications."
+  },
+  {
+   "key": "why.w6",
+   "group": "why",
+   "type": "text",
+   "label": "Point 6",
+   "default": "Support for project planning and equipment implementation, according to the agreed scope of supply."
+  },
+  {
+   "key": "commitment.title",
+   "group": "commitment",
+   "type": "text",
+   "label": "Heading",
+   "default": "Our Commitment"
+  },
+  {
+   "key": "commitment.text",
+   "group": "commitment",
+   "type": "textarea",
+   "label": "Paragraph",
+   "default": "At Sky Protein Oil Private Limited, we believe that suitable waste materials can become valuable resources when processed using appropriate technology. We are committed to developing practical industrial machinery solutions that help customers improve processing efficiency, recover useful materials, and manage waste responsibly."
+  },
+  {
+   "key": "commitment.tagline",
+   "group": "commitment",
+   "type": "text",
+   "label": "Closing line",
+   "default": "Sky Protein Oil Private Limited — Transforming Waste into Valuable Resources."
+  },
+  {
+   "key": "commitment.image",
+   "group": "commitment",
+   "type": "image",
+   "label": "Commitment section image",
+   "default": "/img/svc-custom.svg"
+  },
+  {
+   "key": "contact.eyebrow",
+   "group": "contact",
+   "type": "text",
+   "label": "Small heading",
+   "default": "Contact Us"
+  },
+  {
+   "key": "contact.title",
+   "group": "contact",
+   "type": "text",
+   "label": "Heading",
+   "default": "Discuss Your Processing Requirements"
+  },
+  {
+   "key": "contact.text",
+   "group": "contact",
+   "type": "textarea",
+   "label": "Intro",
+   "default": "Share your waste type, processing capacity and available utilities, and we will help you plan a suitable machinery configuration."
+  },
+  {
+   "key": "contact.address_label",
+   "group": "contact",
+   "type": "text",
+   "label": "Address - label",
+   "default": "Address"
+  },
+  {
+   "key": "contact.address",
+   "group": "contact",
+   "type": "textarea",
+   "label": "Address (leave empty to hide)",
+   "default": ""
+  },
+  {
+   "key": "contact.phone_label",
+   "group": "contact",
+   "type": "text",
+   "label": "Phone - label",
+   "default": "Phone"
+  },
+  {
+   "key": "contact.phone",
+   "group": "contact",
+   "type": "text",
+   "label": "Phone number (leave empty to hide)",
+   "default": ""
+  },
+  {
+   "key": "contact.email_label",
+   "group": "contact",
+   "type": "text",
+   "label": "Email - label",
+   "default": "Email"
+  },
+  {
+   "key": "contact.email",
+   "group": "contact",
+   "type": "text",
+   "label": "Email address (leave empty to hide)",
+   "default": ""
+  },
+  {
+   "key": "contact.form_title",
+   "group": "contact",
+   "type": "text",
+   "label": "Form heading",
+   "default": "Send Us an Enquiry"
+  },
+  {
+   "key": "contact.f_name",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: name label",
+   "default": "Full Name"
+  },
+  {
+   "key": "contact.f_company",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: company label",
+   "default": "Company Name"
+  },
+  {
+   "key": "contact.f_phone",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: phone label",
+   "default": "Phone Number"
+  },
+  {
+   "key": "contact.f_email",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: email label",
+   "default": "Email Address"
+  },
+  {
+   "key": "contact.f_interest",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: interest label",
+   "default": "Interested In"
+  },
+  {
+   "key": "contact.opt_default",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: dropdown first option",
+   "default": "Select a division"
+  },
+  {
+   "key": "contact.opt_other",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: dropdown last option",
+   "default": "Other / Customized Machinery"
+  },
+  {
+   "key": "contact.f_message",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: message label",
+   "default": "Your Requirements"
+  },
+  {
+   "key": "contact.ph_message",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: message placeholder",
+   "default": "Waste type, daily capacity, available utilities, location..."
+  },
+  {
+   "key": "contact.submit",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: send button",
+   "default": "Send Enquiry"
+  },
+  {
+   "key": "footer.about",
+   "group": "footer",
+   "type": "textarea",
+   "label": "Short company description",
+   "default": "Advanced waste processing and rendering machinery solutions for poultry waste, hatchery waste, eggshell waste, food waste and other suitable organic by-products."
+  },
+  {
+   "key": "footer.links_title",
+   "group": "footer",
+   "type": "text",
+   "label": "Links heading",
+   "default": "Quick Links"
+  },
+  {
+   "key": "footer.contact_title",
+   "group": "footer",
+   "type": "text",
+   "label": "Contact heading",
+   "default": "Get in Touch"
+  },
+  {
+   "key": "footer.tagline",
+   "group": "footer",
+   "type": "text",
+   "label": "Tagline",
+   "default": "Transforming Waste into Valuable Resources."
+  },
+  {
+   "key": "footer.copyright",
+   "group": "footer",
+   "type": "text",
+   "label": "Copyright text (year is added automatically)",
+   "default": "Sky Protein Oil Private Limited. All rights reserved."
+  },
+  {
+   "key": "msg.inquiry_ok",
+   "group": "messages",
+   "type": "textarea",
+   "label": "Enquiry sent - success message",
+   "default": "Thank you! Your enquiry has been received. Our team will get back to you shortly."
+  },
+  {
+   "key": "msg.inquiry_err",
+   "group": "messages",
+   "type": "textarea",
+   "label": "Enquiry failed - error message",
+   "default": "Sorry, we could not send your enquiry. Please try again or contact us directly."
+  },
+  {
+   "key": "msg.required",
+   "group": "messages",
+   "type": "textarea",
+   "label": "Missing details - message",
+   "default": "Please enter your name and a phone number or email address."
+  },
+  {
+   "key": "msg.sending",
+   "group": "messages",
+   "type": "text",
+   "label": "Sending message",
+   "default": "Sending your enquiry..."
+  }
+ ]
+}

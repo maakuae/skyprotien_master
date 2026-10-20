@@ -1,0 +1,10 @@
+{
+  "name": "sky-protein-oil-website",
+  "version": "1.0.0",
+  "description": "Sky Protein Oil Private Limited - website with admin panel (no dependencies)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED",
+  "private": true
+}

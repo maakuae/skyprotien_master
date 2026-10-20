@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4efe3"/><stop offset="1" stop-color="#e7f5e8"/></linearGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#b8944a" opacity=".22"/></pattern></defs>
+<rect width="800" height="520" fill="url(#bg)"/><rect width="800" height="520" fill="url(#dots)"/>
+<circle cx="400" cy="270" r="190" fill="#fff" opacity=".72"/><ellipse cx="400" cy="450" rx="210" ry="18" fill="#0c2d5e" opacity=".12"/>
+<g transform="translate(300,300)"><path d="M-110 0A110 90 0 0 1 110 0L90 14L66 -4L40 16L14 -6L-12 14L-38 -4L-62 16L-90 14Z" fill="#fff7e6" stroke="#d9c7a0" stroke-width="4"/><path d="M-100 0Q0 150 100 0Z" fill="#f2e2bd" stroke="#d9c7a0" stroke-width="4"/></g><g fill="#fff7e6" stroke="#d9c7a0" stroke-width="3"><path d="M520 250l40-20l20 36l-44 10Z"/><path d="M470 340l30-12l16 28l-36 6Z"/><path d="M560 350l26-8l8 24l-28 6Z"/></g></svg>

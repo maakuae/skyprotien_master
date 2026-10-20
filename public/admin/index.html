@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Website Admin | Sky Protein Oil</title>
+<link rel="icon" href="/img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1b63c6;--blue-d:#164fa0;--green:#2e8b2e;--ink:#0c2d5e;--bg:#f3f6f9;--card:#fff;--line:#e2e8f0;--mut:#64748b;--danger:#dc2626;--gold:#f59e0b}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:#1e293b;font-size:14px;line-height:1.5}
+h1,h2,h3{font-family:Outfit,Inter,sans-serif;color:var(--ink);margin:0}
+button{font:inherit;cursor:pointer}
+.hidden{display:none!important}
+.btn{text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;color:#1e293b;padding:8px 14px;border-radius:10px;font-weight:600;font-size:13px;transition:.15s}
+.btn:hover{border-color:var(--blue);color:var(--blue)}
+.btn.primary{background:linear-gradient(95deg,var(--blue),var(--green));color:#fff;border-color:transparent}
+.btn.primary:hover{filter:brightness(1.08);color:#fff}
+.btn.primary:disabled{opacity:.45;cursor:not-allowed;filter:none}
+.btn.danger{color:var(--danger)}.btn.danger:hover{border-color:var(--danger);color:var(--danger)}
+.btn.sm{padding:5px 10px;font-size:12px;border-radius:8px}
+input[type=text],input[type=password],textarea,select{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font:inherit;background:#fff;color:#0f172a}
+textarea{resize:vertical;min-height:84px}
+input:focus,textarea:focus,select:focus{outline:2px solid rgba(27,99,198,.35);border-color:var(--blue)}
+
+/* login */
+#login{min-height:100%;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 0%,#e1eef9,#f3f6f9 60%)}
+.login-card{width:100%;max-width:400px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:0 20px 50px rgba(12,45,94,.12)}
+.login-card img{height:84px;display:block;margin:0 auto 18px}
+.login-card h1{font-size:22px;text-align:center}
+.login-card p.sub{text-align:center;color:var(--mut);margin:6px 0 22px}
+.err{color:var(--danger);font-weight:600;margin-top:10px;min-height:20px;font-size:13px}
+
+/* app shell */
+#app{display:grid;grid-template-columns:260px 1fr;grid-template-rows:64px 1fr;height:100%}
+.topbar{grid-column:1/3;display:flex;align-items:center;gap:14px;padding:0 20px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-family:Outfit;font-weight:800;color:var(--ink);font-size:17px;white-space:nowrap}
+.topbar .brand img{height:38px}
+.topbar .brand small{font:600 11px Inter;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:-2px}
+.search{flex:1;max-width:420px;margin-left:12px}
+.search input{padding:8px 12px 8px 34px;background:#f1f5f9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='5'/%3E%3Cpath d='M11 11l4 4'/%3E%3C/svg%3E") no-repeat 11px center;border-color:transparent}
+.spacer{flex:1}
+#dirty{font-size:12px;color:var(--gold);font-weight:700}
+.side{background:#fff;border-right:1px solid var(--line);overflow:auto;padding:14px 10px}
+.side h4{font:700 11px Inter;letter-spacing:.14em;text-transform:uppercase;color:#94a3b8;margin:14px 10px 6px}
+.side a{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:10px;color:#334155;text-decoration:none;font-weight:600;cursor:pointer}
+.side a:hover{background:#f1f5f9}
+.side a.on{background:linear-gradient(95deg,rgba(27,99,198,.12),rgba(46,139,46,.12));color:var(--blue-d)}
+.badge{background:var(--gold);color:#fff;border-radius:99px;font-size:11px;padding:1px 8px;font-weight:700}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+main{overflow:auto;padding:26px 32px 90px}
+.wrap{max-width:860px;margin:0 auto}
+.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.pagehead h2{font-size:26px}.pagehead p{margin:4px 0 0;color:var(--mut)}
+.banner{background:#fff7e6;border:1px solid #fbd78b;color:#8a5a00;border-radius:12px;padding:12px 16px;margin-bottom:18px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.field{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:12px}
+.field.edited{border-color:#f5c26b;box-shadow:0 0 0 3px rgba(245,158,11,.1)}
+.field .lab{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.field label{font-weight:700;color:#0f172a}
+.field .grp{font-size:11px;color:#94a3b8;font-weight:600;margin-left:8px}
+.field .tools{display:flex;gap:8px;align-items:center}
+.link{background:none;border:none;color:var(--blue);font-weight:600;font-size:12px;padding:0}
+.link:hover{text-decoration:underline}
+.imgrow{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.thumb{width:200px;height:130px;border:1px solid var(--line);border-radius:12px;background:#fff;background-image:linear-gradient(45deg,#eef2f6 25%,transparent 25%,transparent 75%,#eef2f6 75%),linear-gradient(45deg,#eef2f6 25%,transparent 25%,transparent 75%,#eef2f6 75%);background-size:16px 16px;background-position:0 0,8px 8px;display:grid;place-items:center;overflow:hidden;flex:none}
+.thumb img{max-width:100%;max-height:100%;object-fit:contain}
+.imgmeta{flex:1;min-width:200px}
+.imgmeta .path{font-size:12px;color:var(--mut);word-break:break-all;margin-bottom:10px}
+.imgmeta .btns{display:flex;gap:8px;flex-wrap:wrap}
+.empty{text-align:center;color:var(--mut);padding:50px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.media{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.media .im{height:120px;background:#f1f5f9;position:relative;overflow:hidden;cursor:pointer}
+.media .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.media .mt{padding:8px 10px;font-size:11px;color:var(--mut);display:flex;justify-content:space-between;align-items:center;gap:6px}
+.media .mt span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.inq{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:12px}
+.inq.new{border-left:4px solid var(--gold)}
+.inq .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.inq h3{font-size:17px}.inq .when{color:var(--mut);font-size:12px}
+.chip{display:inline-block;background:#e8f1fb;color:var(--blue-d);font-weight:600;font-size:12px;padding:2px 10px;border-radius:99px}
+.inq .meta{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0;font-size:13px}
+.inq .meta a{color:var(--blue);text-decoration:none;font-weight:600}
+.inq .msg{background:#f8fafc;border-radius:10px;padding:10px 12px;white-space:pre-wrap;word-break:break-word}
+.inq .acts{display:flex;gap:8px;margin-top:12px}
+.modal{position:fixed;inset:0;background:rgba(7,29,63,.55);z-index:50;display:grid;place-items:center;padding:20px}
+.modal .box{background:#fff;border-radius:20px;max-width:760px;width:100%;max-height:86vh;overflow:auto;padding:22px}
+.modal .box h3{margin-bottom:14px}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:80;padding:12px 20px;border-radius:12px;color:#fff;font-weight:600;box-shadow:0 12px 30px rgba(0,0,0,.25);max-width:90vw}
+#toast.ok{background:var(--green)}#toast.bad{background:var(--danger)}#toast.info{background:var(--blue)}
+.mobnav{display:none}
+@media (max-width:860px){
+ #app{grid-template-columns:1fr}.topbar{grid-column:1}.side{display:none}
+ .mobnav{display:block;padding:12px 16px 0;background:var(--bg)}
+ main{padding:16px 16px 90px}.search{display:none}.thumb{width:100%;height:160px}
+ .topbar .brand small{display:none}
+}
+</style>
+</head>
+<body>
+
+<div id="login">
+  <form class="login-card" id="login-form">
+    <img src="/img/logo.png" alt="Sky Protein Oil">
+    <h1>Website Admin</h1>
+    <p class="sub">Sign in to edit your website content and images.</p>
+    <label for="pw" style="font-weight:600">Password</label>
+    <input id="pw" type="password" autocomplete="current-password" autofocus style="margin-top:6px">
+    <div class="err" id="login-err"></div>
+    <button class="btn primary" style="width:100%;justify-content:center;margin-top:8px;padding:12px" type="submit">Sign in</button>
+    <p style="text-align:center;margin:18px 0 0"><a href="/" style="color:var(--mut);font-size:13px">&larr; Back to website</a></p>
+  </form>
+</div>
+
+<div id="app" class="hidden">
+  <div class="topbar">
+    <div class="brand"><img src="/img/favicon.png" alt=""><span>Website Admin<small>Sky Protein Oil</small></span></div>
+    <div class="search"><input type="text" id="q" placeholder="Search all texts and images..."></div>
+    <div class="spacer"></div>
+    <span id="dirty" class="hidden"></span>
+    <a class="btn" href="/" target="_blank" rel="noopener">View site &#8599;</a>
+    <button class="btn primary" id="save" disabled>Save changes</button>
+    <button class="btn" id="logout">Sign out</button>
+  </div>
+  <nav class="side" id="side"></nav>
+  <div style="overflow:auto;min-width:0">
+    <div class="mobnav"><select id="mobsel"></select></div>
+    <main><div class="wrap" id="view"></div></main>
+  </div>
+</div>
+
+<div id="toast" class="hidden"></div>
+
+<script>
+(function(){
+  var TOKEN = sessionStorage.getItem('spo_token') || '';
+  var state = { groups:[], fields:[], pending:{}, view:'g:splash', inquiries:[], uploads:[], defaultPassword:false, query:'' };
+  var $ = function(id){return document.getElementById(id);};
+  function h(tag, attrs){
+    var el=document.createElement(tag); attrs=attrs||{};
+    Object.keys(attrs).forEach(function(k){
+      var v=attrs[k]; if(v==null||v===false) return;
+      if(k==='class') el.className=v; else if(k==='text') el.textContent=v; else if(k.slice(0,2)==='on') el.addEventListener(k.slice(2),v); else if(k==='value') el.value=v; else el.setAttribute(k,v===true?'':v);
+    });
+    for(var i=2;i<arguments.length;i++){var c=arguments[i]; if(c==null) continue; el.appendChild(typeof c==='string'?document.createTextNode(c):c);}
+    return el;
+  }
+  var tt; function toast(msg,type){var t=$('toast');t.textContent=msg;t.className=type||'ok';clearTimeout(tt);tt=setTimeout(function(){t.className='hidden';},4200);}
+  function api(method,url,body){
+    var opt={method:method,headers:{}};
+    if(TOKEN) opt.headers.Authorization='Bearer '+TOKEN;
+    if(body!==undefined){opt.headers['Content-Type']='application/json';opt.body=JSON.stringify(body);}
+    return fetch(url,opt).then(function(r){return r.json().catch(function(){return {};}).then(function(j){
+      if(r.status===401 && TOKEN){ signOut(true); throw new Error('Session expired. Please sign in again.'); }
+      if(!r.ok){var e=new Error(j.error||('Error '+r.status)); e.data=j; throw e;} return j;});});
+  }
+
+  /* ---------- auth ---------- */
+  function signOut(expired){ TOKEN=''; sessionStorage.removeItem('spo_token'); $('app').classList.add('hidden'); $('login').classList.remove('hidden'); $('pw').value=''; if(expired) $('login-err').textContent='Session expired. Please sign in again.'; }
+  $('login-form').addEventListener('submit',function(e){
+    e.preventDefault(); $('login-err').textContent='';
+    api('POST','/api/login',{password:$('pw').value}).then(function(j){TOKEN=j.token;sessionStorage.setItem('spo_token',TOKEN);boot();}).catch(function(err){$('login-err').textContent=err.message;});
+  });
+  $('logout').addEventListener('click',function(){ if(dirtyCount()&&!confirm('You have unsaved changes. Sign out anyway?')) return; api('POST','/api/admin/logout').catch(function(){}).then(function(){signOut();}); });
+
+  /* ---------- data ---------- */
+  function boot(){
+    Promise.all([api('GET','/api/admin/content'),api('GET','/api/admin/inquiries'),api('GET','/api/admin/uploads')]).then(function(r){
+      state.groups=r[0].groups; state.fields=r[0].fields; state.defaultPassword=r[0].defaultPassword; state.inquiries=r[1].items; state.uploads=r[2].files; state.pending={};
+      $('login').classList.add('hidden'); $('app').classList.remove('hidden'); renderAll();
+    }).catch(function(err){ if(TOKEN) toast(err.message,'bad'); });
+  }
+  function val(f){ return Object.prototype.hasOwnProperty.call(state.pending,f.key)?state.pending[f.key]:f.value; }
+  function dirtyCount(){ return Object.keys(state.pending).length; }
+  function setPending(f,v){
+    if(v===f.value) delete state.pending[f.key]; else state.pending[f.key]=v;
+    updateDirty();
+  }
+  function updateDirty(){
+    var n=dirtyCount(); $('save').disabled=!n; var d=$('dirty'); d.classList.toggle('hidden',!n); d.textContent=n+' unsaved change'+(n>1?'s':'');
+    document.querySelectorAll('[data-fk]').forEach(function(el){
+      var f=state.fields.find(function(x){return x.key===el.getAttribute('data-fk');}); if(f) el.classList.toggle('edited',Object.prototype.hasOwnProperty.call(state.pending,f.key)); });
+    renderSide(true);
+  }
+  $('save').addEventListener('click',save);
+  addEventListener('keydown',function(e){ if((e.ctrlKey||e.metaKey)&&e.key==='s'){e.preventDefault(); if(dirtyCount()) save();} });
+  addEventListener('beforeunload',function(e){ if(dirtyCount()){e.preventDefault();e.returnValue='';} });
+  function save(){
+    var vals=Object.assign({},state.pending); if(!Object.keys(vals).length) return;
+    $('save').disabled=true; $('save').textContent='Saving...';
+    api('PUT','/api/admin/content',{values:vals}).then(function(){
+      state.fields.forEach(function(f){ if(Object.prototype.hasOwnProperty.call(vals,f.key)){ if(vals[f.key]===null){f.value=f.default;f.custom=false;} else {f.value=vals[f.key];f.custom=f.value!==f.default;} } });
+      state.pending={}; toast('Saved. Your website is updated.'); renderAll();
+    }).catch(function(err){ var m=err.message; if(err.data&&err.data.errors){ m+=': '+Object.keys(err.data.errors).map(function(k){var f=state.fields.find(function(x){return x.key===k;});return (f?f.label:k)+' ('+err.data.errors[k]+')';}).join('; ');} toast(m,'bad'); })
+    .then(function(){ $('save').textContent='Save changes'; updateDirty(); });
+  }
+
+  /* ---------- navigation ---------- */
+  function newCount(){ return state.inquiries.filter(function(i){return i.status==='new';}).length; }
+  function groupDirty(g){ return Object.keys(state.pending).some(function(k){var f=state.fields.find(function(x){return x.key===k;});return f&&f.group===g;}); }
+  function renderSide(light){
+    var side=$('side'); side.textContent='';
+    side.appendChild(h('h4',{text:'Website content'}));
+    state.groups.forEach(function(g){
+      side.appendChild(h('a',{class:state.view==='g:'+g.id&&!state.query?'on':'',onclick:function(){go('g:'+g.id);}},h('span',{text:g.title}),groupDirty(g.id)?h('i',{class:'dot'}):null));
+    });
+    side.appendChild(h('h4',{text:'Tools'}));
+    var nc=newCount();
+    side.appendChild(h('a',{class:state.view==='inq'?'on':'',onclick:function(){go('inq');}},h('span',{text:'Enquiries'}),nc?h('span',{class:'badge',text:String(nc)}):null));
+    side.appendChild(h('a',{class:state.view==='media'?'on':'',onclick:function(){go('media');}},h('span',{text:'Image library'})));
+    side.appendChild(h('a',{class:state.view==='settings'?'on':'',onclick:function(){go('settings');}},h('span',{text:'Settings'})));
+    if(!light){
+      var ms=$('mobsel'); ms.textContent='';
+      state.groups.forEach(function(g){ms.appendChild(h('option',{value:'g:'+g.id,text:g.title}));});
+      ms.appendChild(h('option',{value:'inq',text:'Enquiries'}));ms.appendChild(h('option',{value:'media',text:'Image library'}));ms.appendChild(h('option',{value:'settings',text:'Settings'}));
+      ms.value=state.view;
+    }
+  }
+  $('mobsel').addEventListener('change',function(e){go(e.target.value);});
+  function go(v){ state.view=v; state.query=''; $('q').value=''; renderAll(); $('view').parentNode.parentNode.scrollTop=0; }
+  $('q').addEventListener('input',function(e){ state.query=e.target.value.trim().toLowerCase(); renderView(); renderSide(true); });
+  function renderAll(){ renderSide(); renderView(); updateDirty(); }
+
+  /* ---------- views ---------- */
+  function renderView(){
+    var v=$('view'); v.textContent='';
+    if(state.defaultPassword) v.appendChild(h('div',{class:'banner'},h('span',{text:'Security: you are still using the default password. Please change it now.'}),h('button',{class:'btn sm',onclick:function(){go('settings');}},'Change password')));
+    if(state.query) return renderSearch(v);
+    if(state.view.slice(0,2)==='g:') return renderGroup(v,state.view.slice(2));
+    if(state.view==='inq') return renderInquiries(v);
+    if(state.view==='media') return renderMedia(v);
+    if(state.view==='settings') return renderSettings(v);
+  }
+  function renderGroup(v,gid){
+    var g=state.groups.find(function(x){return x.id===gid;})||state.groups[0];
+    v.appendChild(h('div',{class:'pagehead'},h('div',{},h('h2',{text:g.title}),h('p',{text:'Edit the text and images, then click Save changes.'}))));
+    state.fields.filter(function(f){return f.group===g.id;}).forEach(function(f){v.appendChild(fieldEl(f));});
+  }
+  function renderSearch(v){
+    var q=state.query;
+    var list=state.fields.filter(function(f){return (f.label+' '+val(f)+' '+f.key).toLowerCase().indexOf(q)>-1;});
+    v.appendChild(h('div',{class:'pagehead'},h('div',{},h('h2',{text:'Search results'}),h('p',{text:list.length+' match'+(list.length===1?'':'es')+' for "'+state.query+'"'}))));
+    if(!list.length) v.appendChild(h('div',{class:'empty',text:'Nothing found.'}));
+    list.slice(0,60).forEach(function(f){v.appendChild(fieldEl(f,true));});
+  }
+  function fieldEl(f,showGroup){
+    var box=h('div',{class:'field'+(Object.prototype.hasOwnProperty.call(state.pending,f.key)?' edited':''),'data-fk':f.key});
+    var grp=state.groups.find(function(g){return g.id===f.group;});
+    var reset=h('button',{class:'link',type:'button',onclick:function(){ if(f.custom) state.pending[f.key]=null; else delete state.pending[f.key]; refreshField(box,f); box.classList.toggle('edited',Object.prototype.hasOwnProperty.call(state.pending,f.key)); updateDirty(); }},'Reset to default');
+    var lab=h('div',{class:'lab'},h('div',{},h('label',{text:f.label}),showGroup&&grp?h('span',{class:'grp',text:grp.title}):null),h('div',{class:'tools'},reset));
+    box.appendChild(lab); box.appendChild(inputFor(f,box)); return box;
+  }
+  function refreshField(box,f){ var old=box.children[1]; box.replaceChild(inputFor(f,box),old); }
+  function curVal(f){ if(Object.prototype.hasOwnProperty.call(state.pending,f.key)){ var p=state.pending[f.key]; return p===null?f.default:p; } return f.value; }
+  function inputFor(f,box){
+    var cur=curVal(f);
+    if(f.type==='image'){
+      var img=h('img',{src:cur,alt:''}); var path=h('div',{class:'path',text:cur===f.default?'Default image':cur});
+      var file=h('input',{type:'file',accept:'image/png,image/jpeg,image/webp,image/gif',class:'hidden'});
+      function setImg(url){ setPending(f,url); img.src=url; path.textContent=url===f.default?'Default image':url; box.classList.toggle('edited',Object.prototype.hasOwnProperty.call(state.pending,f.key)); updateDirty(); }
+      file.addEventListener('change',function(){ var fl=file.files[0]; if(!fl) return; uploadFile(fl).then(function(r){setImg(r.url);toast('Image uploaded. Click Save changes to publish it.','info');}).catch(function(e){toast(e.message,'bad');}); file.value=''; });
+      return h('div',{class:'imgrow'},h('div',{class:'thumb'},img),h('div',{class:'imgmeta'},path,h('div',{class:'btns'},
+        h('button',{class:'btn sm primary',type:'button',onclick:function(){file.click();}},'Upload new image'),
+        h('button',{class:'btn sm',type:'button',onclick:function(){openLibrary(function(u){setImg(u);});}},'Choose from library')),file));
+    }
+    var el = f.type==='textarea' ? h('textarea',{maxlength:3000,rows:Math.min(8,Math.max(3,Math.ceil(cur.length/90)))}) : h('input',{type:'text',maxlength:300});
+    el.value=cur;
+    el.addEventListener('input',function(){ setPending(f,el.value); box.classList.toggle('edited',Object.prototype.hasOwnProperty.call(state.pending,f.key)); });
+    return el;
+  }
+
+  /* ---------- uploads ---------- */
+  function readAsDataURL(file){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result);};r.onerror=function(){rej(new Error('Could not read the file.'));};r.readAsDataURL(file);});}
+  function downscale(file){
+    return new Promise(function(res){
+      if(!/^image\/(png|jpeg|webp)$/.test(file.type)) return res(null);
+      var url=URL.createObjectURL(file), im=new Image();
+      im.onload=function(){ URL.revokeObjectURL(url); var MAX=2400; if(im.width<=MAX&&im.height<=MAX) return res(null);
+        var s=MAX/Math.max(im.width,im.height), c=document.createElement('canvas'); c.width=Math.round(im.width*s); c.height=Math.round(im.height*s); c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+        res(c.toDataURL(file.type==='image/png'?'image/png':'image/jpeg',0.9)); };
+      im.onerror=function(){URL.revokeObjectURL(url);res(null);}; im.src=url; });
+  }
+  function uploadFile(file){
+    if(!/^image\/(png|jpeg|webp|gif)$/.test(file.type)) return Promise.reject(new Error('Please choose a PNG, JPG, WebP or GIF image.'));
+    if(file.size>30*1024*1024) return Promise.reject(new Error('That file is too large.'));
+    toast('Uploading...','info');
+    return downscale(file).then(function(small){ return small||readAsDataURL(file); }).then(function(data){
+      return api('POST','/api/admin/upload',{name:file.name,data:data}); }).then(function(r){ state.uploads.unshift({name:r.name,url:r.url,size:r.size,mtime:Date.now()}); return r; });
+  }
+  function openLibrary(onPick){
+    var m=h('div',{class:'modal',onclick:function(e){if(e.target===m)m.remove();}}); var box=h('div',{class:'box'}); m.appendChild(box);
+    box.appendChild(h('h3',{text:'Choose an image'}));
+    var grid=h('div',{class:'grid'});
+    if(!state.uploads.length) box.appendChild(h('div',{class:'empty',text:'No uploaded images yet. Use "Upload new image" first.'}));
+    state.uploads.forEach(function(u){ grid.appendChild(h('div',{class:'media'},h('div',{class:'im',onclick:function(){onPick(u.url);m.remove();}},h('img',{src:u.url,alt:'',loading:'lazy'})),h('div',{class:'mt'},h('span',{text:u.name})))); });
+    box.appendChild(grid); box.appendChild(h('div',{style:'margin-top:16px;text-align:right'},h('button',{class:'btn',onclick:function(){m.remove();}},'Close')));
+    document.body.appendChild(m);
+  }
+  function renderMedia(v){
+    var file=h('input',{type:'file',accept:'image/png,image/jpeg,image/webp,image/gif',multiple:true,class:'hidden'});
+    file.addEventListener('change',function(){ var fs=Array.prototype.slice.call(file.files); file.value=''; fs.reduce(function(p,fl){return p.then(function(){return uploadFile(fl);});},Promise.resolve()).then(function(){toast('Upload complete.');renderView();}).catch(function(e){toast(e.message,'bad');}); });
+    v.appendChild(h('div',{class:'pagehead'},h('div',{},h('h2',{text:'Image library'}),h('p',{text:'Everything you have uploaded. Pick these from any image field.'})),h('div',{},h('button',{class:'btn primary',onclick:function(){file.click();}},'Upload images'),file)));
+    if(!state.uploads.length) return v.appendChild(h('div',{class:'empty',text:'No uploaded images yet.'}));
+    var grid=h('div',{class:'grid'});
+    state.uploads.forEach(function(u){
+      grid.appendChild(h('div',{class:'media'},h('div',{class:'im'},h('img',{src:u.url,alt:'',loading:'lazy'})),
+        h('div',{class:'mt'},h('span',{text:Math.round(u.size/1024)+' KB'}),h('button',{class:'link',style:'color:#dc2626',onclick:function(){ if(!confirm('Delete this image?')) return;
+          api('DELETE','/api/admin/uploads/'+encodeURIComponent(u.name)).then(function(){state.uploads=state.uploads.filter(function(x){return x.name!==u.name;});toast('Deleted.');renderView();}).catch(function(e){toast(e.message,'bad');}); }},'Delete'))));
+    });
+    v.appendChild(grid);
+  }
+
+  /* ---------- enquiries ---------- */
+  function renderInquiries(v){
+    v.appendChild(h('div',{class:'pagehead'},h('div',{},h('h2',{text:'Enquiries'}),h('p',{text:'Messages sent from the contact form on your website.'})),
+      h('button',{class:'btn',onclick:exportCsv},'Export CSV')));
+    if(!state.inquiries.length) return v.appendChild(h('div',{class:'empty',text:'No enquiries yet.'}));
+    state.inquiries.forEach(function(i){
+      var card=h('div',{class:'inq '+i.status});
+      var meta=h('div',{class:'meta'});
+      if(i.phone) meta.appendChild(h('a',{href:'tel:'+i.phone.replace(/[^+\d]/g,''),text:i.phone}));
+      if(i.email) meta.appendChild(h('a',{href:'mailto:'+i.email,text:i.email}));
+      card.appendChild(h('div',{class:'top'},h('div',{},h('h3',{text:i.name+(i.company?' - '+i.company:'')}),h('div',{class:'when',text:new Date(i.createdAt).toLocaleString()})),i.interest?h('span',{class:'chip',text:i.interest}):null));
+      card.appendChild(meta);
+      if(i.message) card.appendChild(h('div',{class:'msg',text:i.message}));
+      card.appendChild(h('div',{class:'acts'},
+        h('button',{class:'btn sm',onclick:function(){var st=i.status==='new'?'read':'new';api('PATCH','/api/admin/inquiries/'+i.id,{status:st}).then(function(){i.status=st;renderAll();}).catch(function(e){toast(e.message,'bad');});}},i.status==='new'?'Mark as read':'Mark as new'),
+        h('button',{class:'btn sm danger',onclick:function(){ if(!confirm('Delete this enquiry?')) return; api('DELETE','/api/admin/inquiries/'+i.id).then(function(){state.inquiries=state.inquiries.filter(function(x){return x.id!==i.id;});renderAll();}).catch(function(e){toast(e.message,'bad');}); }},'Delete')));
+      v.appendChild(card);
+    });
+  }
+  function exportCsv(){
+    var cols=['createdAt','name','company','phone','email','interest','message','status'];
+    function q(s){s=String(s==null?'':s); if(/^[=+\-@]/.test(s)) s="'"+s; return '"'+s.replace(/"/g,'""')+'"';}
+    var csv=[cols.join(',')].concat(state.inquiries.map(function(i){return cols.map(function(c){return q(i[c]);}).join(',');})).join('\n');
+    var a=h('a',{href:URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv'})),download:'enquiries.csv'}); document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  /* ---------- settings ---------- */
+  function renderSettings(v){
+    v.appendChild(h('div',{class:'pagehead'},h('div',{},h('h2',{text:'Settings'}),h('p',{text:'Admin account'}))));
+    var cur=h('input',{type:'password',autocomplete:'current-password'}), nx=h('input',{type:'password',autocomplete:'new-password'}), nx2=h('input',{type:'password',autocomplete:'new-password'});
+    v.appendChild(h('div',{class:'field'},h('div',{class:'lab'},h('label',{text:'Change admin password'})),
+      h('div',{style:'display:grid;gap:10px;max-width:380px'},h('div',{},'Current password',cur),h('div',{},'New password (min. 8 characters)',nx),h('div',{},'Repeat new password',nx2),
+      h('div',{},h('button',{class:'btn primary',onclick:function(){
+        if(nx.value!==nx2.value) return toast('The new passwords do not match.','bad');
+        api('POST','/api/admin/password',{current:cur.value,next:nx.value}).then(function(){state.defaultPassword=false;cur.value=nx.value=nx2.value='';toast('Password changed.');renderView();}).catch(function(e){toast(e.message,'bad');}); }},'Update password')))));
+    v.appendChild(h('div',{class:'field'},h('div',{class:'lab'},h('label',{text:'Backups'})),h('p',{style:'margin:0;color:#64748b',text:'All your edits are stored in data/content.json, enquiries in data/inquiries.json and uploaded images in the uploads folder. Copy those to back up your site.'})));
+  }
+
+  if(TOKEN) boot();
+})();
+</script>
+</body>
+</html>
