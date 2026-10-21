@@ -53,6 +53,10 @@
    "title": "Our commitment"
   },
   {
+   "id": "gallery",
+   "title": "Photos & videos"
+  },
+  {
    "id": "contact",
    "title": "Contact & enquiry form"
   },
@@ -190,6 +194,13 @@
    "default": "Contact"
   },
   {
+   "key": "header.nav_gallery",
+   "group": "header",
+   "type": "text",
+   "label": "Menu: Photos & videos",
+   "default": "Photos & Videos"
+  },
+  {
    "key": "header.cta",
    "group": "header",
    "type": "text",
@@ -277,15 +288,15 @@
    "key": "hero.image",
    "group": "hero",
    "type": "image",
-   "label": "Hero machine photo",
-   "default": "/img/machine.jpg"
+   "label": "Hero manufacturing warehouse photo",
+   "default": "/img/manufacturing-warehouse.svg"
   },
   {
    "key": "hero.caption",
    "group": "hero",
    "type": "text",
    "label": "Caption on the photo",
-   "default": "Industrial rendering machinery"
+   "default": "Modern Manufacturing Warehouse"
   },
   {
    "key": "about.eyebrow",
@@ -1063,6 +1074,118 @@
    "type": "image",
    "label": "Commitment section image",
    "default": "/img/svc-custom.svg"
+  },
+  {
+   "key": "gallery.eyebrow",
+   "group": "gallery",
+   "type": "text",
+   "label": "Small heading",
+   "default": "Photos & Videos"
+  },
+  {
+   "key": "gallery.title",
+   "group": "gallery",
+   "type": "text",
+   "label": "Heading",
+   "default": "A Closer Look at Our Machinery"
+  },
+  {
+   "key": "gallery.text",
+   "group": "gallery",
+   "type": "text",
+   "label": "Description",
+   "default": "Explore our rendering equipment and mobile processing solutions."
+  },
+  {
+   "key": "gallery.photo_label",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo badge",
+   "default": "Photo"
+  },
+  {
+   "key": "gallery.photo_1_image",
+   "group": "gallery",
+   "type": "image",
+   "label": "Photo 1",
+   "default": "/img/machine.jpg"
+  },
+  {
+   "key": "gallery.photo_1_title",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo 1 title",
+   "default": "Industrial Rendering Machinery"
+  },
+  {
+   "key": "gallery.photo_1_text",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo 1 description",
+   "default": "Rendering equipment for processing suitable organic by-products."
+  },
+  {
+   "key": "gallery.photo_2_image",
+   "group": "gallery",
+   "type": "image",
+   "label": "Photo 2",
+   "default": "/img/mobirender.jpg"
+  },
+  {
+   "key": "gallery.photo_2_title",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo 2 title",
+   "default": "Sky MobiRender"
+  },
+  {
+   "key": "gallery.photo_2_text",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo 2 description",
+   "default": "A mobile rendering unit designed for on-site processing."
+  },
+  {
+   "key": "gallery.photo_3_image",
+   "group": "gallery",
+   "type": "image",
+   "label": "Photo 3",
+   "default": "/img/manufacturing-warehouse.svg"
+  },
+  {
+   "key": "gallery.photo_3_title",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo 3 title",
+   "default": "Manufacturing Facility"
+  },
+  {
+   "key": "gallery.photo_3_text",
+   "group": "gallery",
+   "type": "text",
+   "label": "Photo 3 description",
+   "default": "A look inside a modern machinery production workspace."
+  },
+  {
+   "key": "gallery.video_title",
+   "group": "gallery",
+   "type": "text",
+   "label": "Video placeholder title",
+   "default": "Company Video Coming Soon"
+  },
+  {
+   "key": "gallery.video_text",
+   "group": "gallery",
+   "type": "text",
+   "label": "Video placeholder description",
+   "default": "Our manufacturing and machinery videos will be available here soon."
+  },
+  {
+   "key": "gallery.video_caption",
+   "group": "gallery",
+   "type": "text",
+   "label": "Video caption",
+   "default": "Video showcase"
   },
   {
    "key": "contact.eyebrow",

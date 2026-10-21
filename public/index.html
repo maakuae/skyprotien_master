@@ -56,6 +56,9 @@ h1,h2,h3,h4,.font-heading{font-family:'Outfit',sans-serif}
 .tilt-card:hover{transition:transform .18s ease-out,opacity .7s ease,box-shadow .3s,border-color .3s !important}
 #hero-frame{transition:transform .6s cubic-bezier(.2,.8,.2,1);will-change:transform}
 #hero-frame.is-moving{transition:transform .12s ease-out}
+.product-slider-track{scrollbar-width:none}
+.product-slider-track::-webkit-scrollbar{display:none}
+.gallery-mosaic{grid-auto-flow:dense}
 </style>
 </head>
 <body class="antialiased selection:bg-oil-400 selection:text-brand-950">
@@ -168,6 +171,7 @@ h1,h2,h3,h4,.font-heading{font-family:'Outfit',sans-serif}
       <a href="#about" class="hover:text-brand-600 transition" data-cms="header.nav_about">About Us</a>
       <a href="#products" class="hover:text-brand-600 transition" data-cms="header.nav_products">Products</a>
       <a href="#services" class="hover:text-brand-600 transition" data-cms="header.nav_services">Services</a>
+      <a href="#gallery" class="hover:text-brand-600 transition" data-cms="header.nav_gallery">Photos &amp; Videos</a>
       <a href="#why" class="hover:text-brand-600 transition" data-cms="header.nav_why">Why Us</a>
       <a href="#contact" class="hover:text-brand-600 transition" data-cms="header.nav_contact">Contact</a>
     </nav>
@@ -182,6 +186,7 @@ h1,h2,h3,h4,.font-heading{font-family:'Outfit',sans-serif}
       <a href="#about" class="py-3 border-b border-slate-100" data-cms="header.nav_about">About Us</a>
       <a href="#products" class="py-3 border-b border-slate-100" data-cms="header.nav_products">Products</a>
       <a href="#services" class="py-3 border-b border-slate-100" data-cms="header.nav_services">Services</a>
+      <a href="#gallery" class="py-3 border-b border-slate-100" data-cms="header.nav_gallery">Photos &amp; Videos</a>
       <a href="#why" class="py-3 border-b border-slate-100" data-cms="header.nav_why">Why Us</a>
       <a href="#contact" class="py-3" data-cms="header.nav_contact">Contact</a>
       <a href="#contact" class="mt-2 text-center bg-gradient-to-r from-brand-600 to-leaf-600 text-white font-bold py-3 rounded-xl" data-cms="header.cta">Request a Quote</a>
@@ -215,9 +220,9 @@ h1,h2,h3,h4,.font-heading{font-family:'Outfit',sans-serif}
     <div class="lg:col-span-6 reveal">
       <div id="hero-frame" class="relative bg-white rounded-3xl p-4 border border-brand-100 shadow-2xl shadow-brand-900/10">
         <div class="img-frame rounded-2xl overflow-hidden bg-white aspect-[4/3] flex items-center justify-center cursor-zoom-in" data-lightbox>
-          <img src="/img/machine.jpg" alt="Industrial rendering machinery" data-cms-img="hero.image" data-cms-attr="alt:hero.caption" class="w-full h-full object-contain">
+          <img src="/img/manufacturing-warehouse.svg" alt="Sky Protein Oil manufacturing warehouse" data-cms-img="hero.image" data-cms-attr="alt:hero.caption" class="w-full h-full object-cover">
         </div>
-        <div class="absolute -bottom-5 left-6 bg-brand-900 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-xl flex items-center gap-2"><i data-lucide="factory" class="w-4 h-4 text-oil-400"></i><span data-cms="hero.caption">Industrial rendering machinery</span></div>
+        <div class="absolute -bottom-5 left-6 bg-brand-900 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-xl flex items-center gap-2"><i data-lucide="factory" class="w-4 h-4 text-oil-400"></i><span data-cms="hero.caption">Modern Manufacturing Warehouse</span></div>
       </div>
     </div>
   </div>
@@ -300,52 +305,58 @@ h1,h2,h3,h4,.font-heading{font-family:'Outfit',sans-serif}
         </div>
       </div>
     </div>
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+    <div id="products-slider" class="mt-10" role="region" aria-label="Product machinery carousel">
+      <div class="flex justify-end gap-3 mb-5">
+        <button type="button" class="product-slider-prev grid place-items-center w-11 h-11 rounded-full bg-white border border-slate-200 text-brand-700 hover:bg-brand-50 disabled:opacity-40 disabled:cursor-not-allowed transition" aria-label="Previous products"><i data-lucide="arrow-left" class="w-5 h-5"></i></button>
+        <button type="button" class="product-slider-next grid place-items-center w-11 h-11 rounded-full bg-white border border-slate-200 text-brand-700 hover:bg-brand-50 disabled:opacity-40 disabled:cursor-not-allowed transition" aria-label="Next products"><i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+      </div>
+      <div class="product-slider-track flex items-stretch gap-7 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4" tabindex="0" aria-label="Product machinery">
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-poultry.svg" alt="Poultry Waste Processing Machinery" data-cms-img="products.p1_image" data-cms-attr="alt:products.p1_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">01</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p1_title">Poultry Waste Processing Machinery</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p1_text">We manufacture machinery for processing poultry waste and suitable poultry by-products, supporting rendering, drying, oil extraction, and protein meal production.</p>
         <a href="#contact" data-opt="1" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-hatchery.svg" alt="Hatchery Waste Processing Machinery" data-cms-img="products.p2_image" data-cms-attr="alt:products.p2_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">02</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p2_title">Hatchery Waste Processing Machinery</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p2_text">We provide machinery solutions for processing hatchery waste, including unhatched eggs, infertile eggs, rejected eggs, egg contents, and other suitable hatchery by-products, subject to the selected process and equipment configuration.</p>
         <a href="#contact" data-opt="2" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-eggshell.svg" alt="Eggshell Processing Machinery" data-cms-img="products.p3_image" data-cms-attr="alt:products.p3_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">03</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p3_title">Eggshell Processing Machinery</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p3_text">We develop processing solutions for eggshell waste, including suitable systems for size reduction, drying, and material recovery, depending on the intended end product.</p>
         <a href="#contact" data-opt="3" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-food.svg" alt="Food Waste Processing Machinery" data-cms-img="products.p4_image" data-cms-attr="alt:products.p4_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">04</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p4_title">Food Waste Processing Machinery</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p4_text">We provide machinery solutions for processing suitable food waste from food processing facilities, commercial kitchens, and other food-related industries. Systems can be configured for size reduction, drying, and other required processing stages.</p>
         <a href="#contact" data-opt="4" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/machine.jpg" alt="Rendering &amp; Protein Meal Production Systems" data-cms-img="products.p5_image" data-cms-attr="alt:products.p5_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">05</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p5_title">Rendering &amp; Protein Meal Production Systems</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p5_text">Our rendering systems are designed to process suitable animal-origin by-products into recovered fats and protein-rich materials, depending on raw material composition and the selected process.</p>
         <a href="#contact" data-opt="6" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-oil.svg" alt="Oil Extraction &amp; Recovery Systems" data-cms-img="products.p6_image" data-cms-attr="alt:products.p6_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">06</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p6_title">Oil Extraction &amp; Recovery Systems</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p6_text">We provide oil recovery and extraction machinery designed to separate recoverable fats from suitable processed materials.</p>
         <a href="#contact" data-opt="5" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-drying.svg" alt="Industrial Drying Systems" data-cms-img="products.p7_image" data-cms-attr="alt:products.p7_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">07</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p7_title">Industrial Drying Systems</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p7_text">Our drying solutions are designed to reduce moisture content in suitable organic materials using the appropriate heating and drying technology.</p>
         <a href="#contact" data-opt="8" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-odour.svg" alt="Odour Control &amp; Environmental Solutions" data-cms-img="products.p8_image" data-cms-attr="alt:products.p8_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">08</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p8_title">Odour Control &amp; Environmental Solutions</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p8_text">We offer suitable process-integrated solutions for odour collection and treatment to support improved working conditions and responsible waste processing.</p>
         <a href="#contact" data-opt="8" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
-      <article class="reveal bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
+      <article class="reveal shrink-0 snap-start w-[88%] sm:w-[calc(50%-0.875rem)] lg:w-[calc(33.333%-1.167rem)] bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col" data-tilt>
         <div class="img-frame relative aspect-[4/3] bg-white overflow-hidden cursor-zoom-in" data-lightbox><img src="/img/svc-custom.svg" alt="Customized Industrial Machinery" data-cms-img="products.p9_image" data-cms-attr="alt:products.p9_title" class="w-full h-full object-cover" loading="lazy"><span class="absolute top-3 left-3 bg-brand-900/90 text-white text-xs font-bold px-3 py-1 rounded-full">09</span></div>
         <div class="p-6 flex flex-col flex-1"><h3 class="text-xl font-bold text-brand-900 leading-snug" data-cms="products.p9_title">Customized Industrial Machinery</h3><p class="mt-3 text-sm text-slate-600 leading-relaxed flex-1" data-cms="products.p9_text">We develop machinery configurations based on customer requirements, raw material characteristics, batch capacity, production targets, available utilities, and plant layout.</p>
         <a href="#contact" data-opt="8" class="enquire mt-5 inline-flex items-center gap-2 text-brand-600 hover:text-leaf-600 font-bold text-sm"><span data-cms="products.cta">Enquire Now</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a></div>
       </article>
+      </div>
     </div>
   </div>
 </section>
@@ -433,6 +444,60 @@ h1,h2,h3,h4,.font-heading{font-family:'Outfit',sans-serif}
       <p class="mt-8 flex items-start gap-3 font-heading text-xl font-bold text-oil-300 reveal"><i data-lucide="sprout" class="w-6 h-6 shrink-0 mt-0.5"></i><span data-cms="commitment.tagline">Sky Protein Oil Private Limited — Transforming Waste into Valuable Resources.</span></p>
     </div>
     <div class="reveal"><div class="img-frame rounded-3xl overflow-hidden border border-white/20 shadow-2xl cursor-zoom-in" data-lightbox><img src="/img/svc-custom.svg" alt="Our Commitment" data-cms-img="commitment.image" data-cms-attr="alt:commitment.title" class="w-full object-cover"></div></div>
+  </div>
+</section>
+
+<!-- PHOTOS & VIDEOS -->
+<section id="gallery" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-sm font-bold uppercase tracking-[.2em] text-leaf-600 reveal" data-cms="gallery.eyebrow">Photos &amp; Videos</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-900 reveal" data-cms="gallery.title">A Closer Look at Our Machinery</h2>
+      <p class="mt-4 text-slate-600 text-lg reveal" data-cms="gallery.text">Explore our rendering equipment and mobile processing solutions.</p>
+    </div>
+    <div class="gallery-mosaic mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:auto-rows-[220px]">
+      <article class="reveal group flex h-full flex-col rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 lg:row-span-2">
+        <div class="img-frame relative aspect-[4/3] lg:aspect-auto lg:flex-1 min-h-0 bg-gradient-to-br from-brand-50 to-slate-100 p-4 cursor-zoom-in" data-lightbox>
+          <img src="/img/machine.jpg" alt="Industrial rendering machinery" data-cms-img="gallery.photo_1_image" data-cms-attr="alt:gallery.photo_1_title" class="w-full h-full object-contain" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white/95 text-brand-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" data-cms="gallery.photo_label">Photo</span>
+        </div>
+        <div class="p-5 lg:p-6"><span class="text-xs font-bold uppercase tracking-widest text-leaf-600">01 / Machinery</span><h3 class="mt-2 font-bold text-brand-900" data-cms="gallery.photo_1_title">Industrial Rendering Machinery</h3><p class="mt-1 text-sm text-slate-600" data-cms="gallery.photo_1_text">Rendering equipment for processing suitable organic by-products.</p></div>
+      </article>
+
+      <article class="reveal relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-3xl border border-brand-800 bg-brand-950 p-7 sm:col-span-2 lg:col-span-2 lg:row-span-2 lg:min-h-0 lg:p-10 shadow-2xl shadow-brand-950/20">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,rgba(46,158,104,.3),transparent_55%),linear-gradient(145deg,#173d68,#071a33_72%)]"></div>
+        <div class="absolute -right-16 -top-20 h-64 w-64 rounded-full border border-white/10"></div>
+        <div class="absolute -right-5 -top-9 h-44 w-44 rounded-full border border-white/10"></div>
+        <div class="relative flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-bold uppercase tracking-[.16em] text-brand-100"><i data-lucide="video" class="h-4 w-4 text-oil-300"></i><span data-cms="gallery.video_caption">Video showcase</span></span>
+          <span class="rounded-full bg-oil-400 px-3 py-1 text-[11px] font-extrabold uppercase tracking-widest text-brand-950">Coming soon</span>
+        </div>
+        <div class="relative flex flex-1 flex-col items-center justify-center py-10 text-center text-white">
+          <div class="grid h-24 w-24 place-items-center rounded-full border border-white/30 bg-white/10 shadow-2xl shadow-black/20 backdrop-blur-sm">
+            <span class="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-oil-300 to-oil-500 text-brand-950 shadow-lg"><i data-lucide="play" class="h-7 w-7 fill-current"></i></span>
+          </div>
+          <h3 class="mt-7 text-2xl font-extrabold sm:text-3xl" data-cms="gallery.video_title">Company Video Coming Soon</h3>
+          <p class="mt-3 max-w-sm text-sm leading-relaxed text-brand-100/80 sm:text-base" data-cms="gallery.video_text">Our manufacturing and machinery videos will be available here soon.</p>
+        </div>
+        <div class="relative flex items-center gap-2 border-t border-white/15 pt-4 text-xs font-semibold text-brand-100/70"><i data-lucide="film" class="h-4 w-4 text-leaf-300"></i><span>Sky Protein Oil · Machinery in motion</span></div>
+      </article>
+
+      <article class="reveal group flex h-full flex-col rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+        <div class="img-frame relative aspect-[4/3] lg:aspect-auto lg:flex-1 min-h-0 bg-gradient-to-br from-oil-50 to-slate-100 p-4 cursor-zoom-in" data-lightbox>
+          <img src="/img/mobirender.jpg" alt="Sky MobiRender mobile rendering unit" data-cms-img="gallery.photo_2_image" data-cms-attr="alt:gallery.photo_2_title" class="w-full h-full object-contain" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white/95 text-brand-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" data-cms="gallery.photo_label">Photo</span>
+        </div>
+        <div class="p-5"><span class="text-xs font-bold uppercase tracking-widest text-oil-600">02 / Featured</span><h3 class="mt-2 font-bold text-brand-900" data-cms="gallery.photo_2_title">Sky MobiRender</h3><p class="mt-1 text-sm text-slate-600 lg:hidden" data-cms="gallery.photo_2_text">A mobile rendering unit designed for on-site processing.</p></div>
+      </article>
+
+      <article class="reveal group flex h-full flex-col rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+        <div class="img-frame relative aspect-[4/3] lg:aspect-auto lg:flex-1 min-h-0 bg-gradient-to-br from-leaf-50 to-brand-50 p-4 cursor-zoom-in" data-lightbox>
+          <img src="/img/manufacturing-warehouse.svg" alt="Manufacturing warehouse" data-cms-img="gallery.photo_3_image" data-cms-attr="alt:gallery.photo_3_title" class="w-full h-full object-contain" loading="lazy">
+          <span class="absolute top-4 left-4 bg-white/95 text-brand-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm" data-cms="gallery.photo_label">Photo</span>
+        </div>
+        <div class="p-5"><span class="text-xs font-bold uppercase tracking-widest text-leaf-600">03 / Facility</span><h3 class="mt-2 font-bold text-brand-900" data-cms="gallery.photo_3_title">Manufacturing Facility</h3><p class="mt-1 text-sm text-slate-600 lg:hidden" data-cms="gallery.photo_3_text">A look inside a modern machinery production workspace.</p></div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -527,6 +592,26 @@ document.querySelectorAll('[data-hide-if-empty]').forEach(function(w){var vals=w
 document.querySelectorAll('[data-hide-if-all-hidden]').forEach(function(w){var any=false;w.querySelectorAll('[data-hide-if-empty]').forEach(function(r){if(!r.classList.contains('hidden')) any=true;});w.classList.toggle('hidden',!any);});
 document.getElementById('year-tag').textContent=new Date().getFullYear();
 if(window.lucide) lucide.createIcons();
+
+/* product carousel */
+(function(){
+  var slider=document.getElementById('products-slider');
+  if(!slider) return;
+  var track=slider.querySelector('.product-slider-track'),prev=slider.querySelector('.product-slider-prev'),next=slider.querySelector('.product-slider-next');
+  function update(){
+    prev.disabled=track.scrollLeft<=1;
+    next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-1;
+  }
+  function move(direction){
+    var card=track.querySelector('article'),gap=parseFloat(getComputedStyle(track).columnGap)||0;
+    if(card) track.scrollBy({left:direction*(card.getBoundingClientRect().width+gap),behavior:'smooth'});
+  }
+  prev.addEventListener('click',function(){move(-1);});
+  next.addEventListener('click',function(){move(1);});
+  track.addEventListener('scroll',update,{passive:true});
+  addEventListener('resize',update);
+  update();
+})();
 
 /* mobile menu + header shadow */
 var mb=document.getElementById('menu-btn'),mm=document.getElementById('mobile-menu');

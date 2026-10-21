@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Modern industrial manufacturing warehouse</title>
+  <desc id="desc">An illustration of a clean manufacturing facility with processing equipment and steel roof trusses.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#dceeff"/><stop offset="1" stop-color="#f8fbff"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#dce6ed"/><stop offset="1" stop-color="#aabdc9"/></linearGradient>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f8fbfd"/><stop offset="1" stop-color="#dce6ed"/></linearGradient>
+    <linearGradient id="machine" x2="0" y2="1"><stop stop-color="#f9fbfc"/><stop offset="1" stop-color="#c3d1da"/></linearGradient>
+    <linearGradient id="window"><stop stop-color="#8ac8e9"/><stop offset="1" stop-color="#d5f1ff"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="17"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <path d="M0 0h1200v175L600 72 0 175z" fill="#d4e0e8"/>
+  <path d="M0 0h1200v38L600 137 0 38z" fill="#183e63"/>
+  <path d="M35 41 600 133l565-92M35 41v115m141-92v96m141-73v72m142-49v49m141-26v26m141-49v49m142-72v72m141-96v96m141-119v119" fill="none" stroke="#32628a" stroke-width="13"/>
+  <path d="m85 51 515 85 515-85" fill="none" stroke="#8db0c8" stroke-width="4" opacity=".7"/>
+  <path d="M0 175 600 92l600 83v490H0z" fill="url(#wall)"/>
+  <path d="M0 175 600 92v573H0z" fill="#eef4f7"/>
+  <path d="m600 92 600 83v490H600z" fill="#e3edf2"/>
+  <path d="M53 205 551 137v194L53 394z" fill="#8da8b9"/>
+  <path d="m68 219 467-63v160L68 374z" fill="url(#window)"/>
+  <path d="m165 206 3 154m108-169v154m111-169v154m108-168v154M68 294l467-64" stroke="#f7fbfd" stroke-width="9" opacity=".95"/>
+  <path d="m649 151 498 69v163l-498-45z" fill="#7895a8"/>
+  <path d="m665 168 466 65v125l-466-42z" fill="url(#window)"/>
+  <path d="m774 183-2 144m116-128-2 139m117-123-2 133m-338-118 466 59" stroke="#f7fbfd" stroke-width="9" opacity=".95"/>
+  <path d="M0 530h1200v151H0z" fill="#cbd8df"/>
+  <path d="M0 594h1200v87H0z" fill="#afc0ca"/>
+  <path d="M0 664h1200v236H0z" fill="url(#floor)"/>
+  <path d="m0 900 405-236m171 236 69-236m201 236-9-236m363 236-244-236" fill="none" stroke="#91a6b3" stroke-width="4" opacity=".55"/>
+  <ellipse cx="614" cy="737" rx="410" ry="52" fill="#536a79" opacity=".2" filter="url(#shadow)"/>
+  <g stroke="#274b67" stroke-width="8" stroke-linejoin="round">
+    <path d="M146 506h170v131H146z" fill="url(#machine)"/>
+    <path d="M164 470h133v36H164z" fill="#1b63a1"/>
+    <path d="M166 523h130v50H166z" fill="#e8f0f4"/>
+    <path d="M178 537h105m-105 16h105" stroke="#7d98aa" stroke-width="6"/>
+    <path d="M165 637v55m132-55v55" fill="none"/>
+    <circle cx="202" cy="603" r="13" fill="#efaa39"/><circle cx="256" cy="603" r="13" fill="#2e9e68"/>
+  </g>
+  <g stroke="#274b67" stroke-width="9" stroke-linejoin="round">
+    <path d="M371 419h237v231H371z" fill="url(#machine)"/>
+    <path d="M389 383h201v37H389z" fill="#1b63a1"/>
+    <path d="M397 441h185v115H397z" fill="#d6e5ed"/>
+    <path d="M409 454h161v88H409z" fill="#f5f9fb"/>
+    <path d="M421 473h137m-137 20h137m-137 20h137" stroke="#8299a7" stroke-width="7"/>
+    <path d="M396 650v47m188-47v47" fill="none"/>
+    <circle cx="426" cy="594" r="14" fill="#2e9e68"/><circle cx="471" cy="594" r="14" fill="#efaa39"/>
+    <path d="M510 594h51" stroke="#274b67" stroke-width="7"/>
+  </g>
+  <g stroke="#274b67" stroke-width="9" stroke-linejoin="round">
+    <path d="M670 491h195v151H670z" fill="url(#machine)"/>
+    <path d="M687 455h161v36H687z" fill="#1b63a1"/>
+    <path d="M690 510h155v72H690z" fill="#e7eff3"/>
+    <path d="M706 524h124m-124 20h124m-124 20h124" stroke="#8ba1af" stroke-width="7"/>
+    <path d="M692 642v52m151-52v52" fill="none"/>
+  </g>
+  <g stroke="#274b67" stroke-width="8" stroke-linejoin="round">
+    <path d="M927 451h109v190H927z" fill="url(#machine)"/>
+    <ellipse cx="981" cy="451" rx="54" ry="18" fill="#edf3f6"/>
+    <path d="M927 491h109" fill="none"/>
+    <path d="M945 640v52m73-52v52" fill="none"/>
+    <path d="M1049 511h79v130h-79z" fill="#d9e5eb"/>
+    <path d="M1060 533h57m-57 20h57m-57 20h57" stroke="#8ba1af" stroke-width="6"/>
+  </g>
+  <path d="M344 676h570" stroke="#d28a22" stroke-width="13" stroke-linecap="round"/>
+  <path d="M369 676v27m492-27v27" stroke="#526b7b" stroke-width="9"/>
+  <g fill="#fff" opacity=".8">
+    <path d="M403 246h25v63h-25z"/><path d="M733 240h25v63h-25z"/>
+  </g>
+  <path d="M0 786h1200" stroke="#8197a4" stroke-width="5" opacity=".5"/>
+</svg>
