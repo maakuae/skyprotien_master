@@ -33,6 +33,10 @@
    "title": "Products & machinery"
   },
   {
+   "id": "mobirender",
+   "title": "Featured machine - Sky MobiRender"
+  },
+  {
    "id": "services",
    "title": "Services & specification details"
   },
@@ -51,6 +55,10 @@
   {
    "id": "contact",
    "title": "Contact & enquiry form"
+  },
+  {
+   "id": "profile",
+   "title": "Company profile (PDF)"
   },
   {
    "id": "footer",
@@ -94,8 +102,15 @@
    "key": "brand.name",
    "group": "brand",
    "type": "text",
-   "label": "Company name (used in image descriptions)",
+   "label": "Company name (used in image descriptions and the PDF)",
    "default": "Sky Protein Oil Private Limited"
+  },
+  {
+   "key": "brand.descriptor",
+   "group": "brand",
+   "type": "text",
+   "label": "Business line under the logo (footer and PDF)",
+   "default": "Waste Rendering & Industrial Equipment Solutions"
   },
   {
    "key": "seo.title",
@@ -665,6 +680,146 @@
    "default": "We develop machinery configurations based on customer requirements, raw material characteristics, batch capacity, production targets, available utilities, and plant layout."
   },
   {
+   "key": "mobirender.badge",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Small badge on the photo",
+   "default": "Featured Machine"
+  },
+  {
+   "key": "mobirender.name",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Machine name",
+   "default": "Sky MobiRender"
+  },
+  {
+   "key": "mobirender.subtitle",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Machine type",
+   "default": "Mobile Chicken Waste Rendering Unit"
+  },
+  {
+   "key": "mobirender.chip_1",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Feature tag 1",
+   "default": "Portable"
+  },
+  {
+   "key": "mobirender.chip_2",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Feature tag 2",
+   "default": "Plug & Play"
+  },
+  {
+   "key": "mobirender.chip_3",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Feature tag 3",
+   "default": "Ready to Operate"
+  },
+  {
+   "key": "mobirender.text",
+   "group": "mobirender",
+   "type": "textarea",
+   "label": "Description",
+   "default": "Sky MobiRender is a mobile chicken waste rendering unit from Sky Protein Oil Pvt. Ltd. Portable, plug & play and ready to operate, it makes rendering chicken waste simple to set up on site."
+  },
+  {
+   "key": "mobirender.tagline",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Tagline",
+   "default": "A Smart Waste-to-Value Solution"
+  },
+  {
+   "key": "mobirender.image",
+   "group": "mobirender",
+   "type": "image",
+   "label": "Machine photo",
+   "default": "/img/mobirender.jpg"
+  },
+  {
+   "key": "mobirender.specs_title",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specifications box heading",
+   "default": "Specifications"
+  },
+  {
+   "key": "mobirender.spec1_label",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 1 - name",
+   "default": "Capacity"
+  },
+  {
+   "key": "mobirender.spec1_value",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 1 - value (leave empty to hide this row)",
+   "default": ""
+  },
+  {
+   "key": "mobirender.spec2_label",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 2 - name",
+   "default": "Power requirement"
+  },
+  {
+   "key": "mobirender.spec2_value",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 2 - value (leave empty to hide this row)",
+   "default": ""
+  },
+  {
+   "key": "mobirender.spec3_label",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 3 - name",
+   "default": "Dimensions"
+  },
+  {
+   "key": "mobirender.spec3_value",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 3 - value (leave empty to hide this row)",
+   "default": ""
+  },
+  {
+   "key": "mobirender.spec4_label",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 4 - name",
+   "default": "Raw material"
+  },
+  {
+   "key": "mobirender.spec4_value",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Specification 4 - value (leave empty to hide this row)",
+   "default": ""
+  },
+  {
+   "key": "mobirender.cta",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Enquiry button",
+   "default": "Enquire About Sky MobiRender"
+  },
+  {
+   "key": "mobirender.by",
+   "group": "mobirender",
+   "type": "text",
+   "label": "Maker line",
+   "default": "By Sky Protein Oil Pvt. Ltd."
+  },
+  {
    "key": "services.eyebrow",
    "group": "services",
    "type": "text",
@@ -714,13 +869,6 @@
    "default": "Request Specifications"
   },
   {
-   "key": "services.r1_image",
-   "group": "services",
-   "type": "image",
-   "label": "Row 1 - picture",
-   "default": "/img/svc-poultry.svg"
-  },
-  {
    "key": "services.r1_name",
    "group": "services",
    "type": "text",
@@ -733,13 +881,6 @@
    "type": "text",
    "label": "Row 1 - details",
    "default": "Capacity, cooker, dryer, oil extractor"
-  },
-  {
-   "key": "services.r2_image",
-   "group": "services",
-   "type": "image",
-   "label": "Row 2 - picture",
-   "default": "/img/svc-hatchery.svg"
   },
   {
    "key": "services.r2_name",
@@ -756,13 +897,6 @@
    "default": "Raw materials handled, process, capacity"
   },
   {
-   "key": "services.r3_image",
-   "group": "services",
-   "type": "image",
-   "label": "Row 3 - picture",
-   "default": "/img/svc-eggshell.svg"
-  },
-  {
    "key": "services.r3_name",
    "group": "services",
    "type": "text",
@@ -775,13 +909,6 @@
    "type": "text",
    "label": "Row 3 - details",
    "default": "Crushing, drying, intended end product"
-  },
-  {
-   "key": "services.r4_image",
-   "group": "services",
-   "type": "image",
-   "label": "Row 4 - picture",
-   "default": "/img/svc-food.svg"
   },
   {
    "key": "services.r4_name",
@@ -798,13 +925,6 @@
    "default": "Waste type, processing method, capacity"
   },
   {
-   "key": "services.r5_image",
-   "group": "services",
-   "type": "image",
-   "label": "Row 5 - picture",
-   "default": "/img/svc-oil.svg"
-  },
-  {
    "key": "services.r5_name",
    "group": "services",
    "type": "text",
@@ -817,13 +937,6 @@
    "type": "text",
    "label": "Row 5 - details",
    "default": "Extraction method, oil recovery system"
-  },
-  {
-   "key": "services.r6_image",
-   "group": "services",
-   "type": "image",
-   "label": "Row 6 - picture",
-   "default": "/img/machine.jpg"
   },
   {
    "key": "services.r6_name",
@@ -983,8 +1096,8 @@
    "key": "contact.address",
    "group": "contact",
    "type": "textarea",
-   "label": "Address (leave empty to hide)",
-   "default": ""
+   "label": "Address",
+   "default": "22/H, Kakkovu, Vazhayur, Malappuram, Kerala – 673633"
   },
   {
    "key": "contact.phone_label",
@@ -997,8 +1110,15 @@
    "key": "contact.phone",
    "group": "contact",
    "type": "text",
-   "label": "Phone number (leave empty to hide)",
-   "default": ""
+   "label": "Phone number 1",
+   "default": "+91 9961939324"
+  },
+  {
+   "key": "contact.phone2",
+   "group": "contact",
+   "type": "text",
+   "label": "Phone number 2 (leave empty to hide)",
+   "default": "+91 7510334108"
   },
   {
    "key": "contact.email_label",
@@ -1011,8 +1131,22 @@
    "key": "contact.email",
    "group": "contact",
    "type": "text",
-   "label": "Email address (leave empty to hide)",
-   "default": ""
+   "label": "Email address",
+   "default": "skyproteinandoil@gmail.com"
+  },
+  {
+   "key": "contact.gstin_label",
+   "group": "contact",
+   "type": "text",
+   "label": "GSTIN - label",
+   "default": "GSTIN"
+  },
+  {
+   "key": "contact.gstin",
+   "group": "contact",
+   "type": "text",
+   "label": "GSTIN number (leave empty to hide)",
+   "default": "32ABPCS0868K1ZV"
   },
   {
    "key": "contact.form_title",
@@ -1064,6 +1198,13 @@
    "default": "Select a division"
   },
   {
+   "key": "contact.opt_mobirender",
+   "group": "contact",
+   "type": "text",
+   "label": "Form: dropdown option for the featured machine",
+   "default": "Sky MobiRender (Mobile Rendering Unit)"
+  },
+  {
    "key": "contact.opt_other",
    "group": "contact",
    "type": "text",
@@ -1090,6 +1231,27 @@
    "type": "text",
    "label": "Form: send button",
    "default": "Send Enquiry"
+  },
+  {
+   "key": "profile.button",
+   "group": "profile",
+   "type": "text",
+   "label": "Button label (hero, footer and contact section)",
+   "default": "Company Profile (PDF)"
+  },
+  {
+   "key": "profile.doc_title",
+   "group": "profile",
+   "type": "text",
+   "label": "Title on the first page of the PDF (the rest of the PDF is built automatically from your website text, contact details and photos)",
+   "default": "Company Profile"
+  },
+  {
+   "key": "profile.footer_note",
+   "group": "profile",
+   "type": "text",
+   "label": "Line at the bottom of every PDF page",
+   "default": "Sky Protein Oil Private Limited | Company Profile"
   },
   {
    "key": "footer.about",

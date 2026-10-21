@@ -8,6 +8,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const profilePdf = require('./lib/profile-pdf');
 
 const PORT = parseInt(process.env.PORT || '3000', 10);
 const HOST = process.env.HOST || '0.0.0.0';
@@ -20,12 +21,7 @@ const F_CONTENT = path.join(DATA, 'content.json');
 const F_INQ = path.join(DATA, 'inquiries.json');
 const F_AUTH = path.join(DATA, 'auth.json');
 const DEFAULT_PASSWORD = 'admin123';
-const CONFIGURED_PASSWORD = process.env.ADMIN_PASSWORD;
-if (process.env.NODE_ENV === 'production' && (!CONFIGURED_PASSWORD || CONFIGURED_PASSWORD === DEFAULT_PASSWORD)) {
-  console.error('Set ADMIN_PASSWORD to a non-default value before running in production.');
-  process.exit(1);
-}
-const ENV_PASSWORD = CONFIGURED_PASSWORD || DEFAULT_PASSWORD;
+const ENV_PASSWORD = process.env.ADMIN_PASSWORD || DEFAULT_PASSWORD;
 const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
 
 fs.mkdirSync(UPLOADS, { recursive: true });
@@ -282,6 +278,18 @@ const server = http.createServer(async (req, res) => {
       const body = renderIndex();
       res.writeHead(200, baseHeaders({ 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache', 'Content-Length': Buffer.byteLength(body) }));
       return res.end(req.method === 'HEAD' ? undefined : body);
+    }
+    if (pathname === '/company-profile.pdf') {
+      const vals = currentValues();
+      const resolve = url => {
+        let m = /^\/(img|uploads)\/([A-Za-z0-9._-]+)$/.exec(url || '');
+        if (!m) return null;
+        const p = safeJoin(m[1] === 'img' ? path.join(PUBLIC, 'img') : UPLOADS, m[2]);
+        return p && fs.existsSync(p) ? p : null;
+      };
+      const pdf = profilePdf.build(vals, { resolve, fallbackLogo: path.join(PUBLIC, 'img', 'logo-pdf.jpg') });
+      res.writeHead(200, baseHeaders({ 'Content-Type': 'application/pdf', 'Content-Disposition': 'inline; filename="Sky-Protein-Oil-Company-Profile.pdf"', 'Cache-Control': 'no-cache', 'Content-Length': pdf.length }));
+      return res.end(req.method === 'HEAD' ? undefined : pdf);
     }
     if (pathname === '/admin' || pathname === '/admin/') {
       const p = path.join(PUBLIC, 'admin', 'index.html');

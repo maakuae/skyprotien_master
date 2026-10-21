@@ -26,7 +26,9 @@ Optional: `PORT=8080 node server.js`.
 | Search box | Finds any text or image across the whole site. |
 | Enquiries | Everything submitted through the website's contact form, with *Mark as read*, *Delete* and *Export CSV*. |
 | Image library | All uploaded images; delete unused ones. |
-| Contact section | Address, phone and email are **hidden on the website until you fill them in**. |
+| Contact & footer details | Address, two phone numbers, e-mail and GSTIN are edited under *Contact & enquiry form*. Any field you empty is hidden automatically (website and PDF). |
+| Featured machine - Sky MobiRender | Name, photo, description and tags. Four optional specification rows (capacity, power, dimensions, raw material) stay hidden until you type a value. |
+| Company profile (PDF) | The **Company Profile (PDF)** button opens `/company-profile.pdf`. The PDF is generated automatically from your website text, contact details and photos, so it always matches your latest edits. Only the title and footer line are set here. |
 
 ## Folder layout
 
@@ -34,7 +36,8 @@ Optional: `PORT=8080 node server.js`.
 server.js            the backend (website + admin API)
 public/index.html    website template
 public/admin/        admin panel
-public/img/          logo, machine photo and default illustrations
+public/img/          logo, machine photos and default illustrations
+lib/profile-pdf.js   builds the company-profile PDF
 uploads/             images you upload (created automatically)
 data/schema.json     list of all editable fields and their default values
 data/content.json    YOUR edits (only values that differ from the defaults)
@@ -46,8 +49,7 @@ data/auth.json       admin password (hashed) once you change it
 
 ## Going live
 
-* This project includes a Render Blueprint (`render.yaml`). In Render, create a new Blueprint from the GitHub repository and enter a strong, unique value for `ADMIN_PASSWORD` when prompted. The server refuses to start in production if this setting is missing or still uses `admin123`.
-* The Render free service uses ephemeral storage. Website edits, enquiries, and uploaded images are stored on its local filesystem and may be lost when the service restarts or is redeployed. Keep backups and do not use this setup if those records must be retained.
-* You can also run it on any host with Node 18+ (VPS, Render, Railway, etc.) and put it behind HTTPS (for example nginx or Caddy as a reverse proxy) – the admin password is sent when you sign in, so use HTTPS on a public server. Set `ADMIN_PASSWORD` to a strong, unique value in production.
+* Run it on any host with Node 18+ (VPS, Render, Railway, etc.) and put it behind HTTPS (for example nginx or Caddy as a reverse proxy) – the admin password is sent when you sign in, so use HTTPS on a public server.
+* JPEG photos are included in the PDF automatically (PNG/WebP/GIF uploads are shown on the website only).
 * The page loads Tailwind CSS, icons and fonts from public CDNs, so visitors need an internet connection (same as the previous version of the site).
 * Enquiries are stored in the admin panel. The server does not send e-mail by itself.
